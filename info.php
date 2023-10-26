@@ -8,12 +8,14 @@ $pg1 = <<<EOT
 <body>
     <header>
         <div class="top">
+        <a href="index.php">
             <h2><b>Laccio di Batte</b></h2>
-            <div class="line-container">
-                <h4>Sofia Werneck</h4>
+        </a>
+        <div class="line-container">
+            <h4>Sofia Werneck</h4>
+            <div class="line"></div>
                 <div class="line"></div>
-                 <div class="line"></div>
-                 <h4>Arthur Sampaio</h4>
+                <h4>Arthur Sampaio</h4>
             </div>     
         </div>
     </header>
@@ -41,6 +43,9 @@ $pg3 = <<<EOT
         .main h2 {text-align: center;font-family: "Quicksand", sans-serif; font-size: 38px; color: #113946;}
         .main h3 {text-align: center; font-family: "Montserrat", sans-serif; font-size: 30px; color: #052c38;}
         .main h4 {text-align: center; font-size: 26px; font-family: "Montserrat Alternates";font-weight: 300; color: #364836;}
+        .top a{text-decoration: none;}
+        .top a:hover{color:#f2ce1a;}
+        .top a::after{color: #f2ce1a;}
     </style>
 </body>
 EOT;

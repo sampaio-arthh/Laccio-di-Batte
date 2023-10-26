@@ -8,7 +8,9 @@
 <body>
     <header>
         <div class="top">
-            <h2><b>Laccio di Batte</b></h2>
+            <a href="index.php">
+                <h2><b>Laccio di Batte</b></h2>
+            </a>
             <div class="line-container">
                 <h4>Sofia Werneck</h4>
                 <div class="line"></div>
@@ -72,6 +74,9 @@
    .buts{display:flex;justify-content: space-around; width: 22.5vw; margin-top: 3.5vh;}
    button {background-color: #113946; color:aliceblue; font-family: 'Tilt Neon', sans-serif; padding:10px; border-radius:8%; font-size: 14px; transition: 0.3s;}
    button:hover {transform:scale(105%); background-color: #AEC3AE;}
+   .top a{text-decoration: none;}
+   .top a:hover{color:#f2ce1a;}
+   .top a::after{color: #f2ce1a;}
 
 .rot {
   width: 3vw;
@@ -84,7 +89,7 @@
 
 @keyframes rot {
   from { transform: rotate(0deg);}
-  from { transform: rotate(360deg);}
+  from { transform: rotate(-360deg);}
 }
 
 @media screen and (width<=960px) {
