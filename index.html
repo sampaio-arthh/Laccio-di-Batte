@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvete</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <h2><b>Laccio di Batte</b></h2>
+            <div class="line-container">
+                <h4>Sofia Werneck</h4>
+                <div class="line"></div>
+                 <div class="line"></div>
+                 <h4>Arthur Sampaio</h4>
+            </div>     
+        </div>
+    </header>
+    <div class="main">
+        <div class="side1">
+            <div class="text-holder1">
+                <h3><b>Sorvetes Deliciosíssimos</b></h3>
+                <h4><i>Venha experimentar nossas delícias</i></h4>            
+            </div>
+            <div class="buts">
+                <a href="inclui.php">
+                    <button >Pedir P/M</button>
+                </a>
+                <a href="incluiG.php">
+                    <button >Pedir G</button>
+                </a>
+                <a href="avaliar.php">
+                    <button>Avaliar</button>
+                </a>
+            </div>
+        </div>
+        <div class="side2">
+            <div class="rot-container">
+                <div class="rot"></div>
+            <div class="rot"></div>
+            <div class="rot"></div>
+            <div class="rot"></div>
+            </div>
+            <div class="img-container">
+                <img src="assets/Img1.png" alt="Sorvete de Pistachio" id="srv1">
+            </div>
+            <div class="rot-container">
+                <div class="rot"></div>
+            <div class="rot"></div>
+            <div class="rot"></div>
+            <div class="rot"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Tilt+Neon&display=swap');
+   *{margin:0; padding:0; border:0;}
+   .top {width: 100vw; display:flex; background-color: #94A684; height: 7vh; justify-content: space-between; align-items: center;}
+   .top h2{margin:  0 0 0 2vw; color:#f2ce1a; font-size:26px; font-family:"Montserrat",'Courier New', Courier, monospace; font-weight: 200;}
+   .line-container{display: grid; align-items: center; align-content: space-between; margin: 0 2vw 0 0}
+   .line-container h4 {text-align: center; font-family: 'Montserrat', sans-serif; font-size:12px; color: #FFEEF4;}
+   .line{width:20vw; height:0.5vh; margin:0.2vh 0; background-color: #AEC3AE;}
+   .main{height: 93vh; background-color: #EAD7BB; display: flex; justify-content: space-around; align-items:center;}
+   .text-holder1{max-width: 30vw;}
+   .main h3 {font-family: 'Quicksand', sans-serif; font-size:45px; max-width: 15vw;}
+   .main h4 {font-family: 'Montserrat', sans-serif; font-size:36px}
+   .side2{display: flex; justify-content: space-evenly; align-items: center;}
+   #srv1{width: 35vw; border-radius:5%; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+   .buts{display:flex;justify-content: space-around; width: 22.5vw; margin-top: 3.5vh;}
+   button {background-color: #113946; color:aliceblue; font-family: 'Tilt Neon', sans-serif; padding:10px; border-radius:8%; font-size: 14px; transition: 0.3s;}
+   button:hover {transform:scale(105%); background-color: #AEC3AE;}
+
+.rot {
+  width: 3vw;
+  height: 2.8vw;
+  border-radius: 35%;
+  background: rgba(255, 255, 255, .75);
+  animation: rot 15s infinite linear;
+  margin: 1.5vh 1.7vw;
+}
+
+@keyframes rot {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+
+@media screen and (width<=960px) {
+    .main h3{font-size:30px;}
+    .main h4{font-size:25px;}
+    .buts{justify-content: space-between;}
+    button{font-size:12px; padding: 10px;}
+    .rot{width: 5vw; height:4.8vw;}
+    #P{margin-right: 2vw;}
+}
+</style>
+</html>
