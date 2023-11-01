@@ -7,3 +7,11 @@ create table pedido (
 	sabor4 varchar(20) not null,
 	constraint pk_pedido primary key (id_pedido)
 );
+create table avaliacao (
+	id_aval int auto_increment not null,
+	nota_sabores int not null,
+	nota_tempo int not null,
+	nota_sistema int not null,
+	opiniao varchar(200),
+	constraint pk_aval primary key (id_aval)
+);
