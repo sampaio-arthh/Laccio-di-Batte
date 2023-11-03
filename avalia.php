@@ -1,3 +1,10 @@
 <?php
-include "aaa.html";
+
+$id_avaliacao = "";
+$tempo = "";
+$sabor = "";
+$sistema = "";
+$opinion = "";
+
+include "avalia.html";
 ?>
