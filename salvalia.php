@@ -1,8 +1,9 @@
 <?php
-$id_avaliacao = $_REQUEST("id_avaliacao");
+
 $tempo = $_REQUEST("tempo");
 $sabor = $_REQUEST("sabor");
 $sistema = $_REQUEST("sistema");
+$id_avaliacao = $_REQUEST("id_aval");
 $opinion = $_REQUEST("opinion");
 
 if(empty($id_avaliacao)) {
@@ -35,18 +36,23 @@ if(!mysqli_select_db($c,$banco))
 	die();
 }
 
-$resp = mysqli_query($c, $sql);
+$found = mysqli_query($c, "select id_pedido from pedido where id_pedido = {$idavaliação}");
 
-if(!$resp)
-{
-	echo "Desculpe, erro na consulta $sql";
-	echo mysqli_error($c);
-	mysqli_close($c);
-	die();
+if ($found) {
+	$resp = mysqli_query($c, $sql);
+
+	if(!$resp){
+		echo "Desculpe, erro na consulta $sql";
+		echo mysqli_error($c);
+		mysqli_close($c);
+		die();
+	}
+	else{
+		header("location: index.php");
+	}
 }
-else
-{
-	header("location: index.php");
+else {
+	echo("<script>alert('Código de avaliação inválido!'</script>");
 }
 
 ?>

@@ -8,7 +8,7 @@ create table pedido (
 	constraint pk_pedido primary key (id_pedido)
 );
 create table avaliacao (
-	id_aval int auto_increment not null,
+	id_aval int not null,
 	nota_sabores int not null,
 	nota_tempo int not null,
 	nota_sistema int not null,
