@@ -15,12 +15,12 @@ else {
 }
 
 if(empty($id_pedido)) {
-		$sql = "insert into pedido(sabor1,sabor2,sabor3,sabor4) values ('$sabor1','$sabor2','$sabor3','$sabor4')";
+		$sql = "insert into pedido(tipo,sabor1,sabor2,sabor3,sabor4) values ('$tipo','$sabor1','$sabor2','$sabor3','$sabor4')";
 }
 else
 {
 		// Alteração
-		$sql = "update pedido set sabor1 = '$sabor1', sabor2 = '$sabor2', sabor3 = '$sabor3', sabor4 = 'sabor4' where id_pedido = $id_pedido";
+		$sql = "update pedido set tipo = '$tipo', sabor1 = '$sabor1', sabor2 = '$sabor2', sabor3 = '$sabor3', sabor4 = 'sabor4' where id_pedido = $id_pedido";
 }
 
 $host = "localhost";
