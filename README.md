@@ -10,11 +10,11 @@ discplina de Desenvolvimento para Internet.
 - Praticar e relembrar conceitos de HTML, CSS e JS
 
 #Checkpoints
-- [x] Página Inicial
-- [x] Formulário de Inclusão
-- [X] Página de Avaliação
-    - [ ] Consertar 'SQL Injections
-    - [ ] Verificação de Id
+- [x] Página Inicial 28.10
+- [x] Formulário de Inclusão 01.11
+- [X] Página de Avaliação 02.11
+    - [X] Consertar 'SQL Injections 07.11
+    - [X] Verificação de Id 08.11
 - [ ] Página de Edição de Avaliação
 - [ ] Entregar projeto :tada:
 
