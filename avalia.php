@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laccio di Batte - Avaliação</title>
+    <title>Laccio di Batte | Avaliação</title>
 </head>
 <body>
 </head>
@@ -72,10 +72,12 @@
                     
                     </form>
             </div>
+            <a class="outro" href="avalista.php">Editar Avaliação</a>
         </div>
         
     </div>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;1,300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Tilt+Neon&display=swap');
         *{margin:0; padding:0; border:0;}
@@ -90,10 +92,17 @@
         select{margin-bottom: 3vh; border-radius: 5px;}
         h3{margin: 4vh auto; font-family: "Montserrat", sans-serif; font-size: 28px; color:rgb(84, 246, 122);}
         h4{color: rgb(173, 238, 117); font-family: "Quicksand", sans-serif; font-size: 18px;}
-        button {background-color: #113946; color:aliceblue; font-family: 'Tilt Neon', sans-serif; padding:10px; border-radius:8%; font-size: 14px; transition: 0.3s;}
+        button {background-color: #113946; color:aliceblue; font-family: 'Tilt Neon', sans-serif; padding:10px; border-radius:8%; font-size: 14px; transition: 0.3s;margin-bottom: 1vh;}
         button:hover {transform:scale(105%); background-color: #AEC3AE;}
+        .main a{text-decoration: none; font-family:"Quicksand", sans-serif; font-weight: 500; color:#113946;}
+        .main a::after{color:#113946}
         .top a{text-decoration: none;}
         .top a:hover{color:#f2ce1a;}
         .top a::after{color: #f2ce1a;}
     </style>
+    <?php
+        if (!empty($_GET)) {
+            echo "<script>alert('Número de Avaliação já existente, use a página correta para editar sua avaliação')</script>";
+        }
+    ?>
 </body>

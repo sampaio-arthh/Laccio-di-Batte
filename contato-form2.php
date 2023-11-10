@@ -14,3 +14,10 @@ EOT;
 
 echo $form;
 ?>
+
+<head>
+	<title>Laccio di Batte Editar Avaliação</title>
+</head>
+<body>
+	
+</body>

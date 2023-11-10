@@ -26,7 +26,20 @@ if(!mysqli_select_db($c,$banco))
 }
 
 $ans = mysqli_query($c, "SELECT id_aval from avaliacao where id_aval = $id_avaliacao");
-if (!$ans) {
+$cont=0;
+$fet = mysqli_query($c, "SELECT * from avaliacao");
+$dado = mysqli_fetch_assoc($fet);
+while ($dado) {
+	if ($dado["id_aval"] == $id_avaliacao) {
+		$cont+=1;
+	}
+	$dado = mysqli_fetch_assoc($fet);
+}
+
+if ($cont != 0) {
+	header("location: avalia.php?e=1");
+}
+else {
 	$sql = "insert into avaliacao(id_aval,tempo,sabor,sistema) values ('$id_avaliacao','$tempo','$sabor','$sistema')";
 	$resp = mysqli_query($c, $sql);
 
@@ -40,10 +53,3 @@ if (!$ans) {
 		header("location: index.php");
 	}
 }
-else {
-	header("location: invalid.php");
-}
-
-
-
-?>
