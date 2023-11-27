@@ -1,19 +1,19 @@
 <?php
 
-	$id_contato = $_REQUEST["id_contato"];
+	$id_aval = $_REQUEST["id_aval"];
 
-	if(!empty($id_contato))
+	if(!empty($id_aval))
 	{
-		$sql = "delete from contato where id_contato = $id_contato";
+		$sql = "delete from avaliacao where id_aval = $id_aval";
 
 		$host = "localhost";
 		$usuario = "root";
 		$senha = "";
-		$banco = "agenda";
+		$banco = "gelato";
 
 		$c = mysqli_connect($host,$usuario,$senha);
-
-		if(!$c)
+        $c2 = $c;
+		if(!$c2)
 		{
 			echo "erro na conexão";
 			echo mysqli_error($c);
@@ -40,8 +40,7 @@
 		}
 		else
 		{
-			// Redirect: Volta para a página contato-lista.php
-			header("location: contato-lista.php");
+			header("location: avalista.php");
 		}
 	}	
 	else

@@ -8,7 +8,7 @@ $pg1 = <<<EOT
 <body>
     <header>
         <div class="top">
-        <a href="index.php">
+            <a href="index.html">
             <h2><b>Laccio di Batte</b></h2>
         </a>
         <div class="line-container">
@@ -53,3 +53,4 @@ EOT;
 echo $pg1;
 echo $pg2;
 echo $pg3;
+?>

@@ -42,14 +42,19 @@ if ($cont != 0) {
 else {
 	$sql = "insert into avaliacao(id_aval,tempo,sabor,sistema) values ('$id_avaliacao','$tempo','$sabor','$sistema')";
 	$resp = mysqli_query($c, $sql);
-
-	if(!$resp){
+	$resp2 = $resp;
+	if(!$resp2){
 		echo "Desculpe, erro na consulta $sql";
 		echo mysqli_error($c);
+		mysqli_close($c);
+		mysqli_free_result($resp);
 		mysqli_close($c);
 		die();
 	}
 	else{
-		header("location: index.php");
+		mysqli_close($c);
+		header("location: index.html");
 	}
+
+
 }

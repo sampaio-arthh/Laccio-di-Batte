@@ -18,7 +18,11 @@ discplina de Desenvolvimento para Internet.
 - [X] Página de Listagem de Avaliações
     - [X] Tabelas de Conteúdo
 - [X] Página de Edição de Avaliação - 10.11
-- [ ] Entregar projeto :tada:
+- [X] Entregar projeto :tada: - 11.11
+##Aprimoramentos
+- [X] Página de exclusão de avaliação - 27.11
+- [X] Simplificação dos arquivos - 27.11
+
 
 ##Inspirações:
 - Baccio di Latte -> Paródia

@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="top">
-            <a href="index.php">
+            <a href="index.html">
                 <h2><b>Laccio di Batte</b></h2>
             </a>
             <div class="line-container">

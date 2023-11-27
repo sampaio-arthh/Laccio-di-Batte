@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $id_aval = $_REQUEST["id_aval"];
 $sabor = $_REQUEST["sabor"];
 $tempo = $_REQUEST["tempo"];
@@ -7,7 +7,7 @@ $sistema = $_REQUEST["sistema"];
 
 $host = "localhost";
 $user = 'root';
-$pass = '';
+$pass = "";
 $bd = "gelato";
 
 $c = mysqli_connect($host, $user, $pass);
@@ -27,13 +27,12 @@ if (!$con_table) {
 }
 
 $answ = "UPDATE  avaliacao set  sabor = $sabor, tempo = $tempo, sistema = $sistema WHERE id_aval = $id_aval";
-
-if (!$answ) {
-    header("location: avalista.php");
+$resp = mysqli_query($c, $answ);
+if (!$resp) {
+    echo mysqli_error($c); 
 }
 else {
-    echo "erro";
-    echo mysqli_error($c);
+    header("location: avalista.php");
 }
 
 

@@ -1,3 +1,6 @@
+<?php
+$id = $_GET["id_aval"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
 <body>
     <header>
         <div class="top">
-            <a href="index.php">
+            <a href="index.html">
                 <h2><b>Laccio di Batte</b></h2>
             </a>
             <div class="line-container">
@@ -27,7 +30,8 @@
             <div class="questions">
                 <form action="salvatual.php" method="post" id="form">
                     <div class="part">
-                        <input type="hidden" name="id_aval" value="<?$_REQUEST['id_aval']?>">
+                        <?php echo "<input type='hidden' name='id_aval' value={$id}>";
+                        #echo "<h1> $id </h1>"; ?>
                         <h4>Nota Tempo (1-5)</h4>
                         <select name="tempo" id="tempo">
                             <option value="1">1</option>
@@ -57,6 +61,10 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+                    <?php 
+                    session_start();
+                    $_SESSION["trmit"] = $id;
+                    ?>
                     <div class="part">
                         <button type="submit" id="but">Enviar</button>
                     </div>

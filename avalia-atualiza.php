@@ -1,7 +1,6 @@
 <?php
 
 $id_aval = $_REQUEST["id_aval"];
-
 $host = "localhost";
 $usuario = "root";
 $senha = "";
@@ -43,7 +42,7 @@ if($linha)
     $sabor = $linha["sabor"];
     $tempo = $linha["tempo"];
     $sistema = $linha["sistema"];
-    include "avalia2.php";
+    header("location: avalia2.php?id_aval=$id_aval");
 }
 else
 {
